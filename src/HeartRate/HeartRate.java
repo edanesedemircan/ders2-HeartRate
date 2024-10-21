@@ -1,5 +1,7 @@
 package HeartRate;
 
+import java.util.Scanner;
+
 public class HeartRate {
 	
 	private String name;
@@ -26,7 +28,15 @@ public class HeartRate {
 	}
 	
 	public static void main(String[] args) {
-		HeartRate k1=new HeartRate("Eda",2003);
+		Scanner input= new Scanner(System.in);
+		
+		System.out.println("isim giriniz");
+		String name=input.nextLine();
+		
+		System.out.println("doğum tarihi giriniz");
+		int dogumTarihi= input.nextInt();
+		
+		HeartRate k1=new HeartRate(name, dogumTarihi);
 		k1.show();
 		
 	}
